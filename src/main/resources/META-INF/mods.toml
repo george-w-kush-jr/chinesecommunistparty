@@ -1,0 +1,38 @@
+# META-INF/mods.toml
+
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+mixins = [
+  "mixins.chinesecommunistparty.json"
+]
+[[mods]]
+modId="chinesecommunistpartypatchmixin"
+version="1.0.0"
+displayName="CopyCats+ patch: Chinese Communist Party"
+description='''
+A small Forge patch-mixin for Create: Copycats+ that adds a null‐check around the CopycatByteBlock bite vector,
+preventing the “bite is null” crash when rendering stray copycat blocks.
+'''
+authors="George W Kush, Jr"
+# logoFile="assets/chinesecommunistpartypatchmixin/logo.png"
+# displayURL="https://your.website"
+
+  [[mods.dependencies]]
+  modId="forge"
+  mandatory=true
+  versionRange="[47,)"
+  ordering="NONE"
+  side="BOTH"
+
+   [[mods.dependencies]]
+  modId="copycats"
+  mandatory=true
+  versionRange="[2.2.1,)"
+  ordering="AFTER"
+  side="BOTH"
+
+# Tell Forge where your @Mod‐annotated entry class lives:
+# change the package+class below to match your CCP.java fully-qualified name
+[[mods.entrypoints.main]]
+    value="com.georgewkush.chinesecommunistparty.CCP"

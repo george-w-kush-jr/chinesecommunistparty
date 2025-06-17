@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.georgewkush.chinesecommunistparty.mixin",
+  "refmap": "mixins.chinesecommunistparty.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MixinCopycatByteBlock"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

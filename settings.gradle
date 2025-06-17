@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name = 'MinecraftForge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+        maven {
+            name = "Sponge Snapshots"
+            url  = "https://repo.spongepowered.org/maven-public/"
+        }
+
+    }
+
+    plugins {
+        // ForgeGradle for all the Forge magic
+        id 'net.minecraftforge.gradle' version '5.1.+'
+        // Foojay for toolchain resolution (keeps you off old JDKs)
+        id 'org.gradle.toolchains.foojay-resolver-convention' version '0.7.0'
+    }
+}
+
+rootProject.name = 'chinesecommunistpartypatchmixin'
